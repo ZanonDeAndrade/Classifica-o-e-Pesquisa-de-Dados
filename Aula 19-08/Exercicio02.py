@@ -12,4 +12,4 @@ def main():
     lista = bolha(lista)
     print("Lista Ordenada:", lista)
 
-main()
+main()  
