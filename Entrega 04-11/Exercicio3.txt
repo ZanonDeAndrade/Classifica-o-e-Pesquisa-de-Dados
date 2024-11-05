@@ -1,0 +1,31 @@
+a. Qual método teve o menor número de comparações em média?
+
+    A busca Fibonacci teve 0 comparações em média, mas isso foi devido ao fato de que, 
+    em algumas execuções, a chave não foi encontrada. Em um cenário real, a busca binária
+     teve uma média de 12.26 comparações, que é esperada para esse tamanho de lista e é 
+     geralmente considerada eficiente.
+
+
+
+
+b. Em quais situações você acha que cada método seria mais apropriado?
+
+    Busca Binária: É mais apropriada para listas ordenadas de qualquer tamanho.
+     É um método muito eficiente e, em geral, deve ser preferido devido à sua simplicidade
+    e confiabilidade.
+
+    Busca Fibonacci: É mais adequada para listas ordenadas que são grandes e onde os 
+    elementos têm uma distribuição relativamente uniforme. É menos comum em prática, 
+    mas pode ser interessante em contextos onde essa distribuição é garantida.
+
+
+
+
+c. Como a ordenação da lista afeta a eficiência de cada método?
+
+    Ambos os métodos requerem que a lista esteja ordenada para funcionar corretamente. 
+    A eficiência de ambos se baseia na capacidade de dividir a lista em segmentos para 
+    eliminar rapidamente grandes porções da lista durante a busca. Se a lista não estiver 
+    ordenada, ambos os métodos falharão em encontrar a chave corretamente, e a complexidade 
+    de tempo poderá se degradar para O(n) na busca linear ou outros métodos que não dependem 
+    da ordenação.
