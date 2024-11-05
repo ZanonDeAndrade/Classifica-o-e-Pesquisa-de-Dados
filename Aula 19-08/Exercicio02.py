@@ -14,7 +14,7 @@ def main():
     lista2 = [ 3, 4, 5, 6, 7, 8]
     lista3 = [4, 4, 7, 2, 9, 7]
     lista4 = [9,8,7,6,5,4]
-
+    
 
     lista = bolha(lista1)
     startTime = datetime.datetime.now()  
