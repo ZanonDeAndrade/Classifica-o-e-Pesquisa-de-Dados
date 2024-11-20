@@ -5,13 +5,13 @@ class TabelaHash {
 
     // Adiciona um jogo à tabela hash para cada gênero
     adicionar(jogo) {
-        // Verifica se 'jogo.generos' é um array
+        // Verifica se os generos dos jogos é um array
         if (!Array.isArray(jogo.generos)) {
             console.error('Generos devem ser um array');
             return;
         }
 
-        // Itera sobre todos os gêneros do jogo
+    
         jogo.generos.forEach(genero => {
             // Normaliza para minúsculas para garantir que a busca seja insensível a maiúsculas/minúsculas
             genero = genero.toLowerCase();

@@ -58,22 +58,26 @@ function exibirMenu() {
 
 // Função para buscar jogos por preço
 function buscarPorPreco() {
-  console.clear(); // Limpa o terminal
-  console.log(`${cor.roxo}\n===========================`);
-  console.log("  Buscar por preço do jogo");
-  console.log("===========================" + cor.reset);
-
-  rl.question("Digite o preço do jogo (exemplo: 100): R$ ", function (preco) {
-    preco = parseInt(preco);
-    const jogo = motor.buscarPorPreco(preco);
-    if (jogo) {
-      console.log(`\n${cor.verde}✔️ Jogo encontrado: ${jogo.titulo} - R$${jogo.preco}${cor.reset}`);
-    } else {
-      console.log(`${cor.vermelho}\n❌ Nenhum jogo encontrado com esse preço.${cor.reset}`);
-    }
-    rl.question("\nPressione Enter para voltar ao menu...", () => exibirMenu());
-  });
-}
+    console.clear(); // Limpa o terminal
+    console.log(`${cor.roxo}\n===========================`);
+    console.log("  Buscar por preço do jogo");
+    console.log("===========================" + cor.reset);
+  
+    rl.question("Digite o preço do jogo (exemplo: 100): R$ ", function (preco) {
+      preco = parseInt(preco);
+      const jogos = motor.buscarPorPreco(preco); // Método atualizado para retornar todos os jogos que batem com o preço
+      if (jogos.length > 0) {
+        console.log(`${cor.verde}\n✔️ Jogos encontrados com o preço R$${preco}:${cor.reset}`);
+        jogos.forEach(jogo => {
+          console.log(`${cor.branco}- ${jogo.titulo} - R$${jogo.preco}${cor.reset}`);
+        });
+      } else {
+        console.log(`${cor.vermelho}\n❌ Nenhum jogo encontrado com esse preço.${cor.reset}`);
+      }
+      rl.question("\nPressione Enter para voltar ao menu...", () => exibirMenu());
+    });
+  }
+  
 
 // Função para buscar jogos por faixa de preço
 function buscarPorFaixaDePreco() {

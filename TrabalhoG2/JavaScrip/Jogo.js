@@ -4,7 +4,7 @@ class Jogo {
     this.titulo = titulo;
     this.desenvolvedor = desenvolvedor;
     this.preco = preco;
-    this.generos = generos;  // Lista de gêneros
+    this.generos = generos;  
   }
 }
 
