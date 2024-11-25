@@ -1,4 +1,3 @@
-// Definição de um nó da árvore binária
 class Node {
     constructor(jogo) {
         this.jogo = jogo; // Atribui o objeto 'jogo' ao nó

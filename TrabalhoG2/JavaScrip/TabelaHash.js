@@ -13,7 +13,6 @@ class TabelaHash {
 
     
         jogo.generos.forEach(genero => {
-            // Normaliza para minúsculas para garantir que a busca seja insensível a maiúsculas/minúsculas
             genero = genero.toLowerCase();
 
             if (!this.tabela[genero]) {

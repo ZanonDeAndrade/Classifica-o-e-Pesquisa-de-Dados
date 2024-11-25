@@ -72,7 +72,7 @@ function buscarPorPreco() {
           console.log(`${cor.branco}- ${jogo.titulo} - R$${jogo.preco}${cor.reset}`);
         });
       } else {
-        console.log(`${cor.vermelho}\n❌ Nenhum jogo encontrado com esse preço.${cor.reset}`);
+        console.log(`${cor.vermelho}\n X Nenhum jogo encontrado com esse preço.${cor.reset}`);
       }
       rl.question("\nPressione Enter para voltar ao menu...", () => exibirMenu());
     });
@@ -97,7 +97,7 @@ function buscarPorFaixaDePreco() {
           console.log(`${cor.branco}- ${jogo.titulo} - R$${jogo.preco}${cor.reset}`);
         });
       } else {
-        console.log(`${cor.vermelho}\n❌ Nenhum jogo encontrado nessa faixa de preço.${cor.reset}`);
+        console.log(`${cor.vermelho}\n X Nenhum jogo encontrado nessa faixa de preço.${cor.reset}`);
       }
       rl.question("\nPressione Enter para voltar ao menu...", () => exibirMenu());
     });
@@ -119,13 +119,13 @@ function buscarPorGenero() {
         console.log(`${cor.branco}- ${jogo.titulo} - R$${jogo.preco}${cor.reset}`);
       });
     } else {
-      console.log(`${cor.vermelho}\n❌ Nenhum jogo encontrado nesse gênero.${cor.reset}`);
+      console.log(`${cor.vermelho}\n X Nenhum jogo encontrado nesse gênero.${cor.reset}`);
     }
     rl.question("\nPressione Enter para voltar ao menu...", () => exibirMenu());
   });
 }
 
-// Adicionando jogos para teste
+
 motor.adicionarJogo(new Jogo(1, 'The Witcher 3: Wild Hunt', 'CD Projekt Red', 120, ['RPG', 'Aventura']));
 motor.adicionarJogo(new Jogo(2, 'Minecraft', 'Mojang', 30, ['Aventura', 'Construção']));
 motor.adicionarJogo(new Jogo(3, 'Grand Theft Auto V', 'Rockstar Games', 60, ['Ação', 'Aventura']));
@@ -177,5 +177,5 @@ motor.adicionarJogo(new Jogo(48, 'Bioshock Infinite', 'Irrational Games', 20, ['
 motor.adicionarJogo(new Jogo(49, 'Half-Life: Alyx', 'Valve', 60, ['FPS', 'Aventura']));
 motor.adicionarJogo(new Jogo(50, 'Borderlands 3', 'Gearbox Software', 40, ['Ação', 'FPS']));
 
-// Exibe o menu
+
 exibirMenu();
